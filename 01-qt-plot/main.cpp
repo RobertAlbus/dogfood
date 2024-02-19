@@ -1,4 +1,4 @@
-#include "Algorithm/Wavetable/WavetableOscillatorMono.h"
+#include "Clover/Algorithm/Wavetable/WavetableOscillatorMono.h"
 
 #include <QApplication>
 #include "MainWindow.h"
