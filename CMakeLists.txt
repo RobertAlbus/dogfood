@@ -44,5 +44,4 @@ find_package(Qt6 COMPONENTS Core Gui Widgets Charts REQUIRED)
 # projects
 
 setup_project(01-qt-plot Clover Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Charts)
-
-
+setup_project(02-simple-sounds Clover)
