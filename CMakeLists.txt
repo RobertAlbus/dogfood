@@ -8,8 +8,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_PARALLEL_LEVEL 8 STRING)
 
-set(CMAKE_AUTOMOC ON)
-
 add_compile_options(-Ofast -march=native)
 
 #--------------------------------
@@ -42,4 +40,6 @@ find_package(Qt6 COMPONENTS Core Gui Widgets Charts REQUIRED)
 # projects
 
 setup_project(01-qt-plot Clover Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Charts)
+set_target_properties(01-qt-plot PROPERTIES AUTOMOC ON)
+
 setup_project(02-simple-sounds Clover)
