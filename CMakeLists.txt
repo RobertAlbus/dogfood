@@ -10,6 +10,8 @@ set(CMAKE_BUILD_PARALLEL_LEVEL 8 STRING)
 
 set(CMAKE_AUTOMOC ON)
 
+add_compile_options(-Ofast -march=native)
+
 #--------------------------------
 # dependencies
 
