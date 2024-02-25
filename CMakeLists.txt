@@ -16,18 +16,11 @@ set(CMAKE_AUTOMOC ON)
 include_directories(${PROJECT_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/include)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/src)
 
-find_package(portaudio CONFIG REQUIRED)
-find_package(SndFile CONFIG REQUIRED)
-find_package(rtmidi CONFIG REQUIRED)
-
-
+list(APPEND CLOVER_INCLUDE_DIRECTORIES
+    ${PROJECT_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/include
+)
 set(CLOVER_PATH ~/code/clover)
 include(${CLOVER_PATH}/CMakeLists.Clover.txt)
-target_link_libraries(Clover PUBLIC 
-    portaudio
-    SndFile::sndfile
-    RtMidi::rtmidi
-    )
 
 #--------------------------------
 # project setup
