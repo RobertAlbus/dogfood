@@ -24,6 +24,9 @@ list(APPEND CLOVER_INCLUDE_DIRECTORIES
 set(CLOVER_PATH ~/code/clover)
 include(${CLOVER_PATH}/CMakeLists.Clover.txt)
 
+# temporarily suppress clover warnings
+target_compile_options(Clover PRIVATE -w)
+
 #--------------------------------
 # project setup
 
