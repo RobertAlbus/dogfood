@@ -43,3 +43,6 @@ setup_project(01-qt-plot Clover Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Charts)
 set_target_properties(01-qt-plot PROPERTIES AUTOMOC ON)
 
 setup_project(02-interface-v2 Clover)
+
+setup_project(03-midi Clover)
+target_compile_definitions(03-midi PRIVATE __LINUX_ALSA__)
