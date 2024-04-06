@@ -46,3 +46,5 @@ setup_project(02-interface-v2 Clover)
 
 setup_project(03-midi Clover)
 target_compile_definitions(03-midi PRIVATE __LINUX_ALSA__)
+
+setup_project(100-fun Clover)
