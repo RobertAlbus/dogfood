@@ -42,4 +42,4 @@ find_package(Qt6 COMPONENTS Core Gui Widgets Charts REQUIRED)
 setup_project(01-qt-plot Clover Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Charts)
 set_target_properties(01-qt-plot PROPERTIES AUTOMOC ON)
 
-setup_project(02-simple-sounds Clover)
+setup_project(02-interface-v2 Clover)
