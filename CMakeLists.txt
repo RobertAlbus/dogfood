@@ -1,3 +1,8 @@
+find_program(SCCACHE sccache REQUIRED)
+
+set(CMAKE_C_COMPILER_LAUNCHER ${SCCACHE})
+set(CMAKE_CXX_COMPILER_LAUNCHER ${SCCACHE})
+
 include(CMakeLists.vcpkg.txt)
 cmake_minimum_required(VERSION 3.14)
 
