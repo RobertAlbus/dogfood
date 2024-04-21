@@ -103,16 +103,16 @@ try
                 case libremidi::message_type::CONTROL_CHANGE:
                   ch = cmidi2_ump_get_midi2_cc_index(b);
                   value = (uint) cmidi2_ump_get_midi2_cc_data(b);
-                  value_f = value * (1.0f / UINT_MAX);
+                  value_f = value * (1.0f / (float) UINT_MAX);
                   break;
 
                 default:
                   break;
               }
 
-              // printf("[ bytes %i | group %i | ch %u | value_f %f | value %u ]\n", bytes, group, ch, value_f, value);
+              printf("[ bytes %i | group %i | ch %u | value_f %f | value %u ]\n", bytes, group, ch, value_f, value);
               // printf("%d - %u \n", value == 0, value);
-              printf("%u \n", value);
+              // printf("%u \n", value);
           }
       },
       libremidi::midi2::in_default_configuration()
