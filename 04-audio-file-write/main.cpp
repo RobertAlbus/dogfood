@@ -7,7 +7,7 @@
 #include "Clover/IO/AudioFile/AudioFile.h"
 #include "Clover/IO/AudioFile/AudioFileService.h"
 #include "Clover/IO/AudioFile/AudioFileWriteSettings.h"
-#include "Clover/IO/InterfaceV2.h"
+#include "Clover/IO/Interface.h"
 #include "Clover/Midi/Notes.h"
 #include "Clover/Util/MusicTime.h"
 
@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
 
     if (SHOULD_PLAY) {
 
-        IO::InterfaceV2 interface;
+        IO::Interface interface;
         IO::SystemAudioIoConfig systemAudioConfig = IO::GetSystemAudioIoConfig();
         // systemAudioConfig.printDevices();
 
@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
             SAMPLE_RATE,
             0
         });
-        } catch(IO::Exception e) {
+        } catch(IoException e) {
             printf("%s\n", e.what());
             return 1;
         }
@@ -153,7 +153,7 @@ int main(int argc, char *argv[])
 
         try {
             interface.start();
-        } catch (IO::Exception e) {
+        } catch (IoException e) {
             printf("%s\n", e.what());
             return 1;
         }
